@@ -43,7 +43,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='h-screen flex items-center justify-center'>
-        <form onSubmit={formik.handleSubmit} className='bg-white flex rounded-lg w-1/2'>
+        <form onSubmit={formik.handleSubmit} className='bg-white flex rounded-lg 2xl:w-1/2'>
           <div className='flex-1 text-gray-700 p-20'>
             <h1 className='text-3xl pb-2 font-bold'>
               Let's get started
@@ -57,7 +57,7 @@ export default function Home() {
                   {formik.touched.name && formik.errors.name ? formik.errors.name : 'Name'}
                 </label>
                 <input 
-                className='border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500'
+                className='border-2 border-gray-500 p-2 rounded-md w-[100%] lg:w-1/2 focus:border-teal-500 focus:ring-teal-500'
                 value={formik.values.name}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -71,7 +71,7 @@ export default function Home() {
                   {formik.touched.email && formik.errors.email ? formik.errors.email : 'Email'}
                 </label>
                 <input 
-                className='border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500' 
+                className='border-2 border-gray-500 p-2 rounded-md w-[100%] lg:w-1/2 focus:border-teal-500 focus:ring-teal-500' 
                 id='email' 
                 value={formik.values.email}
                 onChange={formik.handleChange}
@@ -88,7 +88,7 @@ export default function Home() {
                   name='country'
                   value={formik.values.country}
                   onChange={formik.handleChange}
-                  className='border-2 border-gray-500 p-2 rounded-md w-1/2 focus:border-teal-500 focus:ring-teal-500 cursor-pointer' 
+                  className='border-2 border-gray-500 p-2 rounded-md w-[100%] lg:w-1/2 focus:border-teal-500 focus:ring-teal-500 cursor-pointer' 
                   id='country'>
                   <option>United States</option>
                   <option>United Kingdom</option>
@@ -118,7 +118,7 @@ export default function Home() {
               <button className='bg-teal-500 font-bold text-sm text-white py-3 mt-6 rounded-lg w-full cursor-pointer hover:bg-teal-700'>Start learning today!</button>
             </div>
           </div>
-          <div className='flex-1 relative'>
+          <div className='flex-1 relative hidden lg:block'>
             <Image sizes='100%' src={formImage} priority fill alt='form learn' className='object-cover rounded-lg' />
           </div>
         </form>
